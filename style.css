@@ -82,3 +82,11 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
+@media (min-width: 768px) {
+  .heading {
+    transform: translate(-50%, -50%);
+  }
+  .heading__adj {
+    font-size: 100px;
+  }
+}
