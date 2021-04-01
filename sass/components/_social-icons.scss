@@ -1,0 +1,23 @@
+.social {
+  position: fixed;
+  left: 8rem;
+  bottom: 6.5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 13rem;
+
+  &__icon {
+    font-size: 1.7rem;
+    color: $color-white;
+    border: none;
+    outline: none;
+
+    &:hover {
+      color: orangered;
+    }
+
+    &:not(:first-child) {
+      margin-left: 3rem;
+    }
+  }
+}
