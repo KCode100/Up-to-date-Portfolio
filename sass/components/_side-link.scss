@@ -1,0 +1,56 @@
+.side-link {
+  position: absolute;
+  background-color: transparent;
+  transform: translateY(-50%);
+  border: 1px solid $color-primary-light;
+  color: $color-white;
+  text-decoration: none;
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  width: 25rem;
+  padding: 2.5rem 1rem;
+  z-index: 10;
+  transition: all 0.2s;
+  top: 50%;
+  text-align: center;
+
+  &--left {
+    left: -2rem;
+  }
+
+  &--right {
+    right: -2rem;
+  }
+
+  &:hover {
+    color: orangered;
+    transform: rotateY(180deg), translateY(100%);
+    background-color: black;
+  }
+
+  &:hover + .slider {
+    width: 50%;
+  }
+
+  &__text {
+    &--left {
+      margin-left: 3rem;
+    }
+    &--right {
+      margin-right: 3rem;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 50%;
+
+    &--left {
+      left: -1rem;
+    }
+    &--right {
+      transform: rotateY(180deg);
+      right: -1rem;
+    }
+  }
+}

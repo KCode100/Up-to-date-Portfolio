@@ -1,0 +1,12 @@
+.slider {
+  position: absolute;
+  height: 100%;
+  width: 0;
+  background-color: $color-white;
+  transition: all 0.5s cubic-bezier(0.42, 0, 0, 0.995);
+  overflow: hidden;
+
+  &--right {
+    right: 0;
+  }
+}

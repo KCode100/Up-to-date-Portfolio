@@ -5,7 +5,8 @@ body {
   padding: 1rem;
   color: white;
   background-color: $color-primary;
-  overflow-x: hidden;
+  overflow: hidden;
+  font-family: "Rubik", sans-serif;
 
   @media (min-width: 960px) {
     padding: 3rem;
