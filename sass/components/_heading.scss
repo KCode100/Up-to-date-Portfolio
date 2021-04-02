@@ -1,10 +1,16 @@
 .heading {
   position: absolute;
-  top: 50%;
+  // top: 50%;
+  opacity: 0;
   left: 50%;
   transform: translate(-50%, -55%);
   text-align: center;
   font-family: "Rubik", sans-serif;
+  // animation-name: slideUp;
+  // animation-duration: 2s;
+  // animation-fill-mode: forwards;
+  animation: up 1s cubic-bezier(0.42, 0, 0, 0.995) 1s forwards,
+    fade 0.5s 1s cubic-bezier(0.42, 0, 0, 0.995) forwards;
 
   &__name {
     position: relative;

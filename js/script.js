@@ -1,6 +1,6 @@
 const adjEl = document.getElementById('adj');
 
-const adjList = ['motivated', 'focused', 'devoted', 'creative', 'dedicated', 'cheerful', 'diligent', 'competent'];
+const adjList = ['motivated', 'focused', 'devoted', 'creative', 'dedicated', 'upbeat', 'diligent', 'competent'];
 
 let displayIndex = 0;
 let delay = 250;

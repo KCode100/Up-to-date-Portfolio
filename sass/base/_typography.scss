@@ -5,7 +5,7 @@ body {
   padding: 1rem;
   color: white;
   background-color: $color-primary;
-  // overflow: hidden;
+  overflow: hidden;
   font-family: "Rubik", sans-serif;
 
   @media (min-width: 960px) {
@@ -16,13 +16,15 @@ body {
 .status {
   position: absolute;
   text-align: center;
-  top: 4rem;
+  top: -5rem;
   left: 50%;
   transform: translateX(-50%);
   font-size: 1.4rem;
   font-weight: 500;
-  color: orangered;
+  // color: orangered;
   text-transform: uppercase;
   font-family: "Poiret One", cursive;
   letter-spacing: 1.5px;
+  animation: down 1s cubic-bezier(0.42, 0, 0, 0.995) forwards,
+    fade 1s cubic-bezier(0.42, 0, 0, 0.995) forwards;
 }

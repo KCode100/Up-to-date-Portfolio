@@ -1,0 +1,47 @@
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes up {
+  from {
+    visibility: hidden;
+    top: 60%;
+  }
+  to {
+    visibility: visible;
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes left {
+  from {
+    left: -100%;
+  }
+  to {
+    left: -2rem;
+  }
+}
+
+@keyframes right {
+  from {
+    right: -100%;
+  }
+  to {
+    right: -2rem;
+  }
+}
+
+@keyframes down {
+  from {
+    top: -5rem;
+  }
+  to {
+    top: 8rem;
+  }
+}

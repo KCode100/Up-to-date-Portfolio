@@ -1,3 +1,99 @@
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes up {
+  from {
+    visibility: hidden;
+    top: 60%;
+  }
+  to {
+    visibility: visible;
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes up {
+  from {
+    visibility: hidden;
+    top: 60%;
+  }
+  to {
+    visibility: visible;
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes left {
+  from {
+    left: -100%;
+  }
+  to {
+    left: -2rem;
+  }
+}
+
+@keyframes left {
+  from {
+    left: -100%;
+  }
+  to {
+    left: -2rem;
+  }
+}
+
+@-webkit-keyframes right {
+  from {
+    right: -100%;
+  }
+  to {
+    right: -2rem;
+  }
+}
+
+@keyframes right {
+  from {
+    right: -100%;
+  }
+  to {
+    right: -2rem;
+  }
+}
+
+@-webkit-keyframes down {
+  from {
+    top: -5rem;
+  }
+  to {
+    top: 8rem;
+  }
+}
+
+@keyframes down {
+  from {
+    top: -5rem;
+  }
+  to {
+    top: 8rem;
+  }
+}
+
 *,
 *::after,
 *::before {
@@ -33,6 +129,7 @@ body {
   padding: 1rem;
   color: white;
   background-color: #191a1a;
+  overflow: hidden;
   font-family: "Rubik", sans-serif;
 }
 
@@ -45,16 +142,17 @@ body {
 .status {
   position: absolute;
   text-align: center;
-  top: 4rem;
+  top: -5rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   font-size: 1.4rem;
   font-weight: 500;
-  color: orangered;
   text-transform: uppercase;
   font-family: "Poiret One", cursive;
   letter-spacing: 1.5px;
+  -webkit-animation: down 1s cubic-bezier(0.42, 0, 0, 0.995) forwards, fade 1s cubic-bezier(0.42, 0, 0, 0.995) forwards;
+          animation: down 1s cubic-bezier(0.42, 0, 0, 0.995) forwards, fade 1s cubic-bezier(0.42, 0, 0, 0.995) forwards;
 }
 
 .bg {
@@ -152,12 +250,14 @@ body {
 
 .heading {
   position: absolute;
-  top: 50%;
+  opacity: 0;
   left: 50%;
   -webkit-transform: translate(-50%, -55%);
           transform: translate(-50%, -55%);
   text-align: center;
   font-family: "Rubik", sans-serif;
+  -webkit-animation: up 1s cubic-bezier(0.42, 0, 0, 0.995) 1s forwards, fade 0.5s 1s cubic-bezier(0.42, 0, 0, 0.995) forwards;
+          animation: up 1s cubic-bezier(0.42, 0, 0, 0.995) 1s forwards, fade 0.5s 1s cubic-bezier(0.42, 0, 0, 0.995) forwards;
 }
 
 .heading__name {
@@ -236,11 +336,15 @@ body {
 }
 
 .side-link--left {
-  left: -2rem;
+  left: -100%;
+  -webkit-animation: left 0.5s ease-in-out 0s forwards;
+          animation: left 0.5s ease-in-out 0s forwards;
 }
 
 .side-link--right {
-  right: -2rem;
+  right: -100%;
+  -webkit-animation: right 0.5s ease-in-out 0s forwards;
+          animation: right 0.5s ease-in-out 0s forwards;
 }
 
 .side-link:hover {
