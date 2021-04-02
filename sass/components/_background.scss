@@ -25,6 +25,17 @@
     left: 50%;
     transform: translateX(-50%);
     display: block;
+
+    @media (min-width: 960px) {
+      display: none;
+    }
+
+    &--large {
+      display: none;
+      @media (min-width: 960px) {
+        display: block;
+      }
+    }
   }
   &__arrow-head {
     bottom: 125px;
@@ -32,6 +43,19 @@
     transform: translateX(-50%);
     height: 88px;
     width: 100px;
+
+    @media (min-width: 960px) {
+      display: none;
+    }
+
+    &--large {
+      display: none;
+      @media (min-width: 960px) {
+        display: block;
+        height: 121px;
+        width: 140px;
+      }
+    }
   }
   &__lines {
     display: none;
