@@ -24,6 +24,10 @@
       height: 1px;
       width: 40px;
       transform: translateX(30%);
+
+      @media (min-width: 1025px) {
+        height: 2px;
+      }
     }
   }
 
