@@ -94,6 +94,35 @@
   }
 }
 
+.underline {
+  -webkit-animation-name: width;
+          animation-name: width;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0, 0.995);
+          animation-timing-function: cubic-bezier(0.42, 0, 0, 0.995);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes width {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 50rem;
+  }
+}
+
+@keyframes width {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 50rem;
+  }
+}
+
 *,
 *::after,
 *::before {

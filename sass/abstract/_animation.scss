@@ -45,3 +45,18 @@
     top: 8rem;
   }
 }
+
+.underline {
+  animation-name: width;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.42, 0, 0, 0.995);
+  animation-fill-mode: forwards;
+}
+@keyframes width {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 50rem;
+  }
+}
