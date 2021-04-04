@@ -7,3 +7,32 @@
     height: calc(100vh - 60px);
   }
 }
+
+.links {
+  &__about,
+  &__work {
+    position: absolute;
+    color: $color-white;
+    text-decoration: none;
+    top: 10%;
+    transform: translateY(-50%);
+    font-size: 1.6rem;
+    font-weight: 300;
+
+    &:hover {
+      color: orangered;
+    }
+  }
+  &__about {
+    left: -100%;
+    animation: leftMobile 0.5s ease-in-out -0.2s forwards;
+  }
+  &__work {
+    right: -100%;
+    animation: rightMobile 0.5s ease-in-out -0.2s forwards;
+  }
+
+  @media (min-width: 769px) {
+    display: none;
+  }
+}

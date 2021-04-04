@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Vampiro+One&family=Wallpoet&display=swap");
 @-webkit-keyframes fade {
   from {
     opacity: 0;
@@ -6,7 +7,6 @@
     opacity: 1;
   }
 }
-
 @keyframes fade {
   from {
     opacity: 0;
@@ -58,6 +58,24 @@
   }
 }
 
+@-webkit-keyframes leftMobile {
+  from {
+    left: -30%;
+  }
+  to {
+    left: 15%;
+  }
+}
+
+@keyframes leftMobile {
+  from {
+    left: -30%;
+  }
+  to {
+    left: 15%;
+  }
+}
+
 @-webkit-keyframes right {
   from {
     right: -30%;
@@ -73,6 +91,46 @@
   }
   to {
     right: -2rem;
+  }
+}
+
+@-webkit-keyframes rightMobile {
+  from {
+    right: -30%;
+  }
+  to {
+    right: 15%;
+  }
+}
+
+@keyframes rightMobile {
+  from {
+    right: -30%;
+  }
+  to {
+    right: 15%;
+  }
+}
+
+@-webkit-keyframes downMobile {
+  from {
+    top: -5rem;
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    top: 10%;
+  }
+}
+
+@keyframes downMobile {
+  from {
+    top: -5rem;
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    top: 10%;
   }
 }
 
@@ -173,19 +231,40 @@ body {
 }
 
 .name {
+  font-family: "Rock Salt", cursive;
   position: absolute;
   text-align: center;
   top: -5rem;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-size: 1.8rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  font-family: "Poiret One", cursive;
-  letter-spacing: 1.5px;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 2.5px;
+  font-size: 2.2rem;
+}
+
+.name--short {
+  -webkit-animation: downMobile 1s cubic-bezier(0.42, 0, 0, 0.995) forwards, fade 1s cubic-bezier(0.42, 0, 0, 0.995);
+          animation: downMobile 1s cubic-bezier(0.42, 0, 0, 0.995) forwards, fade 1s cubic-bezier(0.42, 0, 0, 0.995);
+}
+
+@media (min-width: 769px) {
+  .name--short {
+    display: none;
+  }
+}
+
+.name--full {
+  display: none;
   -webkit-animation: down 1s cubic-bezier(0.42, 0, 0, 0.995) forwards, fade 1s cubic-bezier(0.42, 0, 0, 0.995);
           animation: down 1s cubic-bezier(0.42, 0, 0, 0.995) forwards, fade 1s cubic-bezier(0.42, 0, 0, 0.995);
+}
+
+@media (min-width: 769px) {
+  .name--full {
+    display: block;
+  }
 }
 
 .bg {
@@ -307,12 +386,12 @@ body {
   position: absolute;
   content: "";
   bottom: 0;
-  left: 0;
+  left: 50%;
   background-color: #6f7377;
   height: 1px;
-  width: 40px;
-  -webkit-transform: translateX(55%);
-          transform: translateX(55%);
+  width: 60px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 @media (min-width: 1025px) {
@@ -450,15 +529,21 @@ body {
 
 .social {
   position: fixed;
-  left: 8rem;
-  bottom: 6.5rem;
+  left: 5rem;
+  bottom: 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 5rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 13rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
 }
 
 .social__icon {
@@ -472,8 +557,11 @@ body {
   color: orangered;
 }
 
-.social__icon:not(:first-child) {
-  margin-left: 3rem;
+@media (min-width: 769px) {
+  .social {
+    left: 8rem;
+    bottom: 6.5rem;
+  }
 }
 
 .main {
@@ -485,6 +573,39 @@ body {
 @media (min-width: 960px) {
   .main {
     height: calc(100vh - 60px);
+  }
+}
+
+.links__about, .links__work {
+  position: absolute;
+  color: #fff;
+  text-decoration: none;
+  top: 10%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.links__about:hover, .links__work:hover {
+  color: orangered;
+}
+
+.links__about {
+  left: -100%;
+  -webkit-animation: leftMobile 0.5s ease-in-out -0.2s forwards;
+          animation: leftMobile 0.5s ease-in-out -0.2s forwards;
+}
+
+.links__work {
+  right: -100%;
+  -webkit-animation: rightMobile 0.5s ease-in-out -0.2s forwards;
+          animation: rightMobile 0.5s ease-in-out -0.2s forwards;
+}
+
+@media (min-width: 769px) {
+  .links {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */

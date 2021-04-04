@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Vampiro+One&family=Wallpoet&display=swap");
+
 body {
   font-weight: 400;
   line-height: 1.7;
@@ -14,16 +16,32 @@ body {
 }
 
 .name {
+  font-family: "Rock Salt", cursive;
   position: absolute;
   text-align: center;
   top: -5rem;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1.8rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  font-family: "Poiret One", cursive;
-  letter-spacing: 1.5px;
-  animation: down 1s cubic-bezier(0.42, 0, 0, 0.995) forwards,
-    fade 1s cubic-bezier(0.42, 0, 0, 0.995);
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 2.5px;
+  font-size: 2.2rem;
+
+  &--short {
+    animation: downMobile 1s cubic-bezier(0.42, 0, 0, 0.995) forwards,
+      fade 1s cubic-bezier(0.42, 0, 0, 0.995);
+    @media (min-width: 769px) {
+      display: none;
+    }
+  }
+
+  &--full {
+    display: none;
+    animation: down 1s cubic-bezier(0.42, 0, 0, 0.995) forwards,
+      fade 1s cubic-bezier(0.42, 0, 0, 0.995);
+
+    @media (min-width: 769px) {
+      display: block;
+    }
+  }
 }

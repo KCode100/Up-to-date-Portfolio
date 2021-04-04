@@ -1,14 +1,10 @@
 .heading {
   position: absolute;
-  // top: 50%;
   opacity: 0;
   left: 50%;
   transform: translate(-50%, -55%);
   text-align: center;
   font-family: "Rubik", sans-serif;
-  // animation-name: slideUp;
-  // animation-duration: 2s;
-  // animation-fill-mode: forwards;
   animation: up 1s cubic-bezier(0.42, 0, 0, 0.995) 1.3s forwards,
     fade 0.5s 1.3s cubic-bezier(0.42, 0, 0, 0.995) forwards;
 
@@ -25,11 +21,11 @@
       position: absolute;
       content: "";
       bottom: 0;
-      left: 0;
+      left: 50%;
       background-color: #6f7377;
       height: 1px;
-      width: 40px;
-      transform: translateX(55%);
+      width: 60px;
+      transform: translateX(-50%);
 
       @media (min-width: 1025px) {
         height: 2px;

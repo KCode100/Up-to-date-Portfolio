@@ -28,12 +28,39 @@
   }
 }
 
+@keyframes leftMobile {
+  from {
+    left: -30%;
+  }
+  to {
+    left: 15%;
+  }
+}
+
 @keyframes right {
   from {
     right: -30%;
   }
   to {
     right: -2rem;
+  }
+}
+@keyframes rightMobile {
+  from {
+    right: -30%;
+  }
+  to {
+    right: 15%;
+  }
+}
+
+@keyframes downMobile {
+  from {
+    top: -5rem;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    top: 10%;
   }
 }
 
@@ -53,6 +80,7 @@
   animation-timing-function: cubic-bezier(0.42, 0, 0, 0.995);
   animation-fill-mode: forwards;
 }
+
 @keyframes width {
   from {
     width: 0px;
