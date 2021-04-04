@@ -1,3 +1,10 @@
+.side-links {
+  display: none;
+  @media (min-width: 769px) {
+    display: block;
+  }
+}
+
 .side-link {
   position: absolute;
   background-color: black;
@@ -11,22 +18,26 @@
   padding: 2.5rem 1rem;
   z-index: 100;
   transition: all 0.2s;
-  top: 50%;
+  top: 20%;
   text-align: center;
+
+  @media (min-width: 1024px) {
+    top: 50%;
+  }
 
   &--left {
     left: -100%;
-    animation: left 0.5s ease-in-out 0s forwards;
+    animation: left 0.5s ease-in-out -0.2s forwards;
   }
 
   &--right {
     right: -100%;
-    animation: right 0.5s ease-in-out 0s forwards;
+    animation: right 0.5s ease-in-out -0.2s forwards;
   }
 
   &:hover {
     color: orangered;
-    transform: rotateY(180deg), translateY(100%);
+    // transform: rotateY(180deg), translateY(100%);
     // background-color: black;
   }
 

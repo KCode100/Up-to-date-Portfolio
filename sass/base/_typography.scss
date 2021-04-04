@@ -13,18 +13,17 @@ body {
   }
 }
 
-.status {
+.name {
   position: absolute;
   text-align: center;
   top: -5rem;
   left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.4rem;
-  font-weight: 500;
-  // color: orangered;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  font-weight: 900;
   text-transform: uppercase;
   font-family: "Poiret One", cursive;
   letter-spacing: 1.5px;
   animation: down 1s cubic-bezier(0.42, 0, 0, 0.995) forwards,
-    fade 1s cubic-bezier(0.42, 0, 0, 0.995) forwards;
+    fade 1s cubic-bezier(0.42, 0, 0, 0.995);
 }

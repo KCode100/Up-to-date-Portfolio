@@ -9,10 +9,10 @@
   // animation-name: slideUp;
   // animation-duration: 2s;
   // animation-fill-mode: forwards;
-  animation: up 1s cubic-bezier(0.42, 0, 0, 0.995) 1s forwards,
-    fade 0.5s 1s cubic-bezier(0.42, 0, 0, 0.995) forwards;
+  animation: up 1s cubic-bezier(0.42, 0, 0, 0.995) 1.3s forwards,
+    fade 0.5s 1.3s cubic-bezier(0.42, 0, 0, 0.995) forwards;
 
-  &__name {
+  &__title {
     position: relative;
     font-size: 16px;
     font-weight: 300;
@@ -29,7 +29,7 @@
       background-color: #6f7377;
       height: 1px;
       width: 40px;
-      transform: translateX(30%);
+      transform: translateX(55%);
 
       @media (min-width: 1025px) {
         height: 2px;

@@ -21,7 +21,7 @@
 
 @keyframes left {
   from {
-    left: -100%;
+    left: -30%;
   }
   to {
     left: -2rem;
@@ -30,7 +30,7 @@
 
 @keyframes right {
   from {
-    right: -100%;
+    right: -30%;
   }
   to {
     right: -2rem;
@@ -42,7 +42,8 @@
     top: -5rem;
   }
   to {
-    top: 8rem;
+    transform: translate(-50%, -50%);
+    top: 20%;
   }
 }
 
