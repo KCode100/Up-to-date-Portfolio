@@ -1,0 +1,58 @@
+.wow-element {
+  position: relative;
+  display: inline-block;
+  font-size: 3rem;
+
+  &__text {
+    visibility: hidden;
+    animation-name: up;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.42, 0, 0, 0.995);
+    animation-fill-mode: forwards;
+    display: block;
+
+    @media (min-width: 769px) {
+      font-size: 5.4rem;
+    }
+
+    &--1 {
+      animation-delay: 1s;
+    }
+    &--2 {
+      animation-delay: 1.5s;
+    }
+    &--3 {
+      animation-delay: 2s;
+    }
+    &--4 {
+      animation-delay: 2.5s;
+    }
+  }
+
+  &__underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    width: 0;
+    height: 0.5px;
+    background-color: white;
+    animation-name: width;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.42, 0, 0, 0.995);
+    animation-fill-mode: forwards;
+
+    &--1 {
+      animation-delay: 0.5s;
+    }
+    &--2 {
+      animation-delay: 1s;
+    }
+    &--3 {
+      animation-delay: 1.5s;
+    }
+    &--4 {
+      animation-delay: 2s;
+    }
+  }
+}

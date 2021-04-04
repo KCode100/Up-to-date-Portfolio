@@ -7,7 +7,7 @@
   }
 }
 
-@keyframes up {
+@keyframes up-home {
   from {
     visibility: hidden;
     top: 60%;
@@ -74,18 +74,56 @@
   }
 }
 
-.underline {
-  animation-name: width;
-  animation-duration: 1s;
-  animation-timing-function: cubic-bezier(0.42, 0, 0, 0.995);
-  animation-fill-mode: forwards;
-}
-
 @keyframes width {
   from {
     width: 0px;
   }
   to {
-    width: 50rem;
+    width: 100%;
+  }
+}
+
+@keyframes left-width {
+  from {
+    left: 25%;
+    width: 0;
+  }
+  to {
+    width: 25%;
+    left: 48%;
+  }
+}
+
+@keyframes up {
+  from {
+    transform: translateY(50px);
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes left-rotate {
+  0% {
+    transform: translate(100px, 0px) rotate(-273deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0);
   }
 }

@@ -2,9 +2,11 @@
   position: relative;
   background-color: black;
   height: calc(100vh - 20px);
+  margin: 1rem;
 
   @media (min-width: 960px) {
     height: calc(100vh - 60px);
+    margin: 3rem;
   }
 }
 

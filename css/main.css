@@ -16,7 +16,7 @@
   }
 }
 
-@-webkit-keyframes up {
+@-webkit-keyframes up-home {
   from {
     visibility: hidden;
     top: 60%;
@@ -28,7 +28,7 @@
   }
 }
 
-@keyframes up {
+@keyframes up-home {
   from {
     visibility: hidden;
     top: 60%;
@@ -156,23 +156,12 @@
   }
 }
 
-.underline {
-  -webkit-animation-name: width;
-          animation-name: width;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0, 0.995);
-          animation-timing-function: cubic-bezier(0.42, 0, 0, 0.995);
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
 @-webkit-keyframes width {
   from {
     width: 0px;
   }
   to {
-    width: 50rem;
+    width: 100%;
   }
 }
 
@@ -181,7 +170,105 @@
     width: 0px;
   }
   to {
-    width: 50rem;
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes left-width {
+  from {
+    left: 25%;
+    width: 0;
+  }
+  to {
+    width: 25%;
+    left: 48%;
+  }
+}
+
+@keyframes left-width {
+  from {
+    left: 25%;
+    width: 0;
+  }
+  to {
+    width: 25%;
+    left: 48%;
+  }
+}
+
+@-webkit-keyframes up {
+  from {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes up {
+  from {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes flash {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes left-rotate {
+  0% {
+    -webkit-transform: translate(100px, 0px) rotate(-273deg);
+            transform: translate(100px, 0px) rotate(-273deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) rotate(0);
+            transform: translate(0, 0) rotate(0);
+  }
+}
+
+@keyframes left-rotate {
+  0% {
+    -webkit-transform: translate(100px, 0px) rotate(-273deg);
+            transform: translate(100px, 0px) rotate(-273deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) rotate(0);
+            transform: translate(0, 0) rotate(0);
   }
 }
 
@@ -216,18 +303,9 @@ body {
 body {
   font-weight: 400;
   line-height: 1.7;
-  padding: 3rem;
-  padding: 1rem;
   color: white;
   background-color: #191a1a;
-  overflow: hidden;
   font-family: "Rubik", sans-serif;
-}
-
-@media (min-width: 960px) {
-  body {
-    padding: 3rem;
-  }
 }
 
 .name {
@@ -267,99 +345,6 @@ body {
   }
 }
 
-.bg {
-  position: absolute;
-}
-
-.bg__dots {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateY(-55%);
-          transform: translateY(-55%);
-  height: 401px;
-  width: 401px;
-}
-
-@media (min-width: 960px) {
-  .bg__dots {
-    position: absolute;
-    left: 60%;
-  }
-}
-
-.bg__arrow-base {
-  bottom: -4px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  display: block;
-}
-
-@media (min-width: 960px) {
-  .bg__arrow-base {
-    display: none;
-  }
-}
-
-.bg__arrow-base--large {
-  display: none;
-}
-
-@media (min-width: 960px) {
-  .bg__arrow-base--large {
-    display: block;
-  }
-}
-
-.bg__arrow-head {
-  bottom: 125px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  height: 88px;
-  width: 100px;
-}
-
-@media (min-width: 960px) {
-  .bg__arrow-head {
-    display: none;
-  }
-}
-
-.bg__arrow-head--large {
-  display: none;
-}
-
-@media (min-width: 960px) {
-  .bg__arrow-head--large {
-    display: block;
-    height: 121px;
-    width: 140px;
-  }
-}
-
-.bg__lines {
-  display: none;
-  width: 281px;
-  height: 320px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-100%, -50%);
-          transform: translate(-100%, -50%);
-}
-
-@media (min-width: 960px) {
-  .bg__lines {
-    display: block;
-  }
-}
-
-.img {
-  width: 100%;
-  height: 100%;
-}
-
 .heading {
   position: absolute;
   opacity: 0;
@@ -368,8 +353,8 @@ body {
           transform: translate(-50%, -55%);
   text-align: center;
   font-family: "Rubik", sans-serif;
-  -webkit-animation: up 1s cubic-bezier(0.42, 0, 0, 0.995) 1.3s forwards, fade 0.5s 1.3s cubic-bezier(0.42, 0, 0, 0.995) forwards;
-          animation: up 1s cubic-bezier(0.42, 0, 0, 0.995) 1.3s forwards, fade 0.5s 1.3s cubic-bezier(0.42, 0, 0, 0.995) forwards;
+  -webkit-animation: up-home 1s cubic-bezier(0.42, 0, 0, 0.995) 1.3s forwards, fade 0.5s 1.3s cubic-bezier(0.42, 0, 0, 0.995) forwards;
+          animation: up-home 1s cubic-bezier(0.42, 0, 0, 0.995) 1.3s forwards, fade 0.5s 1.3s cubic-bezier(0.42, 0, 0, 0.995) forwards;
 }
 
 .heading__title {
@@ -564,15 +549,240 @@ body {
   }
 }
 
+.wow-element {
+  position: relative;
+  display: inline-block;
+  font-size: 3rem;
+}
+
+.wow-element__text {
+  visibility: hidden;
+  -webkit-animation-name: up;
+          animation-name: up;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0, 0.995);
+          animation-timing-function: cubic-bezier(0.42, 0, 0, 0.995);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  display: block;
+}
+
+@media (min-width: 769px) {
+  .wow-element__text {
+    font-size: 5.4rem;
+  }
+}
+
+.wow-element__text--1 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.wow-element__text--2 {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.wow-element__text--3 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.wow-element__text--4 {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+.wow-element__underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  width: 0;
+  height: 0.5px;
+  background-color: white;
+  -webkit-animation-name: width;
+          animation-name: width;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0, 0.995);
+          animation-timing-function: cubic-bezier(0.42, 0, 0, 0.995);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.wow-element__underline--1 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.wow-element__underline--2 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.wow-element__underline--3 {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.wow-element__underline--4 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.bg {
+  position: absolute;
+}
+
+.bg__dots {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-55%);
+          transform: translateY(-55%);
+  height: 401px;
+  width: 401px;
+}
+
+@media (min-width: 960px) {
+  .bg__dots {
+    position: absolute;
+    left: 60%;
+  }
+}
+
+.bg__arrow-base {
+  bottom: -4px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: block;
+}
+
+@media (min-width: 960px) {
+  .bg__arrow-base {
+    display: none;
+  }
+}
+
+.bg__arrow-base--large {
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .bg__arrow-base--large {
+    display: block;
+  }
+}
+
+.bg__arrow-head {
+  bottom: 125px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 88px;
+  width: 100px;
+}
+
+@media (min-width: 960px) {
+  .bg__arrow-head {
+    display: none;
+  }
+}
+
+.bg__arrow-head--large {
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .bg__arrow-head--large {
+    display: block;
+    height: 121px;
+    width: 140px;
+  }
+}
+
+.bg__lines {
+  display: none;
+  width: 281px;
+  height: 320px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+}
+
+@media (min-width: 960px) {
+  .bg__lines {
+    display: block;
+  }
+}
+
+.bg__wow-line {
+  top: 10rem;
+  left: 25%;
+  height: 2.6rem;
+  background-color: #191a1a;
+  -webkit-animation: left-width 2s 0.5s cubic-bezier(0.42, 0, 0, 0.995) forwards;
+          animation: left-width 2s 0.5s cubic-bezier(0.42, 0, 0, 0.995) forwards;
+}
+
+.bg__wow-triangle {
+  top: 11rem;
+  left: 70%;
+  width: 0;
+  height: 0;
+  border: 1rem solid white;
+  border-width: 30px 15px 0 15px;
+  border-color: white transparent transparent transparent;
+  opacity: 0;
+  -webkit-animation: flash 1s 1s cubic-bezier(0.42, 0, 0, 0.995) forwards, left-rotate 1s 1s cubic-bezier(0.42, 0, 0, 0.995) forwards;
+          animation: flash 1s 1s cubic-bezier(0.42, 0, 0, 0.995) forwards, left-rotate 1s 1s cubic-bezier(0.42, 0, 0, 0.995) forwards;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+.main-about {
+  background-color: black;
+  padding: 0 2rem;
+}
+
+.wow-elements-container {
+  display: inline-block;
+  margin: 14.5rem 0 3rem;
+}
+
+@media (min-width: 960px) {
+  .wow-elements-container {
+    margin-bottom: 14rem;
+  }
+}
+
+.about-me {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 2;
+  -webkit-animation: up 1s cubic-bezier(0.42, 0, 0, 0.995), fade 0.5s cubic-bezier(0.42, 0, 0, 0.995) forwards;
+          animation: up 1s cubic-bezier(0.42, 0, 0, 0.995), fade 0.5s cubic-bezier(0.42, 0, 0, 0.995) forwards;
+}
+
 .main {
   position: relative;
   background-color: black;
   height: calc(100vh - 20px);
+  margin: 1rem;
 }
 
 @media (min-width: 960px) {
   .main {
     height: calc(100vh - 60px);
+    margin: 3rem;
   }
 }
 

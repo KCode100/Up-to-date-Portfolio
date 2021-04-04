@@ -5,7 +5,7 @@
   transform: translate(-50%, -55%);
   text-align: center;
   font-family: "Rubik", sans-serif;
-  animation: up 1s cubic-bezier(0.42, 0, 0, 0.995) 1.3s forwards,
+  animation: up-home 1s cubic-bezier(0.42, 0, 0, 0.995) 1.3s forwards,
     fade 0.5s 1.3s cubic-bezier(0.42, 0, 0, 0.995) forwards;
 
   &__title {

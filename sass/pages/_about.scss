@@ -1,0 +1,22 @@
+.main-about {
+  background-color: black;
+  padding: 0 2rem;
+  //   height: 100vh;
+}
+.wow-elements-container {
+  display: inline-block;
+  margin: 14.5rem 0 3rem;
+
+  @media (min-width: 960px) {
+    margin-bottom: 14rem;
+  }
+}
+
+.about-me {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 2;
+  animation: up 1s cubic-bezier(0.42, 0, 0, 0.995),
+    fade 0.5s cubic-bezier(0.42, 0, 0, 0.995) forwards;
+}

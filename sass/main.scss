@@ -4,10 +4,13 @@
 @import "base/base";
 @import "base/typography";
 
-@import "components/background";
 @import "components/heading";
 @import "components/side-link";
 @import "components/slider";
 @import "components/social-icons";
+@import "components/wow-underline";
 
+@import "layout/backgrounds";
+
+@import "pages/about";
 @import "pages/home";
