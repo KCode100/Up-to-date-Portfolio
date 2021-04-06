@@ -1,5 +1,5 @@
 .link-home {
-  color: $color-white;
+  color: black;
 }
 
 .work {
@@ -28,23 +28,53 @@
     position: relative;
     display: inline-block;
     flex: 1;
+    margin-left: 3rem;
+    text-align: center;
 
     &:hover .item__img {
-      opacity: 0.4;
+      // opacity: 0.6;
+      transform: scale(1.03);
     }
 
     &:hover .item__description {
       opacity: 1;
+      transform: translate(100px, -50%);
     }
   }
 
+  // @keyframes shine {
+  //   100% {
+  //     left: 125%;
+  //   }
+  // }
+
   &__img {
+    // position: relative;
     transition: all 0.3s;
     width: 80vw;
     height: auto;
     max-width: 800px;
-    @media (min-width: 600px) {
-    }
+
+    // &::before {
+    //   position: absolute;
+    //   top: 0;
+    //   left: -75%;
+    //   z-index: 2;
+    //   display: block;
+    //   content: "";
+    //   width: 20rem;
+    //   height: 100%;
+    //   background: linear-gradient(
+    //     to right,
+    //     rgba(165, 45, 45, 0) 0%,
+    //     rgba(0, 0, 0, 0.3) 100%
+    //   );
+    //   transform: skewX(-25deg);
+    // }
+
+    // &:hover::before {
+    //   animation: shine 0.75s;
+    // }
   }
   @media (min-width: 600px) {
     margin: 5rem;
@@ -52,10 +82,11 @@
 
   &__description {
     position: absolute;
-    top: 15%;
-    left: 90%;
-    width: 60%;
-    background-color: rgb(19, 19, 19);
+    top: 50%;
+    left: -52%;
+    width: 30%;
+    // background-color: rgba(19, 19, 19, 0.9);
+    // background-color: orangered;
     outline-offset: 1rem;
     // outline: 5px solid orangered;
     opacity: 0;
@@ -63,19 +94,39 @@
     padding: 2rem 3rem;
     z-index: 10;
     color: white;
-    transform: translate(-35%, -50%);
+    border-radius: 1rem;
+    transform: translateY(-50%);
+
+    &--grey {
+      // background-color: rgba(240, 240, 240, 0.9);
+      color: rgba(90, 90, 90, 0.9);
+    }
+    &--orange {
+      color: rgba(237, 110, 55, 0.9);
+      // color: rgba(255, 255, 255, 0.9);
+    }
+    &--brown {
+      // background-color: rgba(233, 219, 181, 0.877);
+      color: rgba(77, 71, 54, 0.6);
+    }
+    &--blue {
+      // background-color: rgba(0, 84, 148, 0.65);
+      color: rgba(0, 84, 148, 0.65);
+      // color: white;
+    }
   }
 
   &__title {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 15px;
-    border-bottom: 1px solid rgba(255, 69, 0, 0.3);
+    // border-bottom: 1px solid rgba(255, 69, 0, 0.3);
     padding-bottom: 0.5rem;
   }
 
   &__text {
     font-size: 1.4rem;
     line-height: 2;
+    text-align: center;
   }
 }
