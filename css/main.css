@@ -872,6 +872,29 @@ body {
   color: black;
 }
 
+.sorting-list {
+  list-style-type: none;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sorting-list__item {
+  color: black;
+  cursor: pointer;
+  padding: 1.4rem 3rem;
+  background-color: rgba(255, 69, 0, 0.9);
+  text-align: center;
+  display: inline-block;
+  border: 1px solid rgba(255, 69, 0, 0.9);
+  border-radius: 3px;
+  margin: 0.3rem;
+}
+
+.sorting-list__item:hover {
+  background-color: white;
+}
+
 .work__container {
   background-color: white;
   overflow: hidden;
@@ -883,7 +906,7 @@ body {
   font-size: 2rem;
   text-align: center;
   padding: 2rem 0.5rem;
-  margin: 2rem 0 6rem;
+  margin: 2rem 0 2rem;
 }
 
 .items {
@@ -911,15 +934,32 @@ body {
   text-align: center;
 }
 
-.item__img-container:hover .item__img {
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
-}
-
 .item__img-container:hover .item__description {
   opacity: 1;
-  -webkit-transform: translate(100px, -50%);
-          transform: translate(100px, -50%);
+  -webkit-animation: slideIn 0.5s ease-out forwards;
+          animation: slideIn 0.5s ease-out forwards;
+}
+
+@-webkit-keyframes slideIn {
+  60% {
+    -webkit-transform: translate(103px, -50%);
+            transform: translate(103px, -50%);
+  }
+  100% {
+    -webkit-transform: translate(100px, -50%);
+            transform: translate(100px, -50%);
+  }
+}
+
+@keyframes slideIn {
+  60% {
+    -webkit-transform: translate(103px, -50%);
+            transform: translate(103px, -50%);
+  }
+  100% {
+    -webkit-transform: translate(100px, -50%);
+            transform: translate(100px, -50%);
+  }
 }
 
 .item__img {
@@ -951,22 +991,11 @@ body {
   border-radius: 1rem;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-}
-
-.item__description--grey {
-  color: rgba(90, 90, 90, 0.9);
-}
-
-.item__description--orange {
-  color: rgba(237, 110, 55, 0.9);
+  color: rgba(77, 71, 54, 0.6);
 }
 
 .item__description--brown {
   color: rgba(77, 71, 54, 0.6);
-}
-
-.item__description--blue {
-  color: rgba(0, 84, 148, 0.65);
 }
 
 .item__title {
