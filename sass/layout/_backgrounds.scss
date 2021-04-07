@@ -21,10 +21,12 @@
     }
   }
   &__arrow-base {
-    bottom: -4px;
+    bottom: -8px;
     left: 50%;
     transform: translateX(-50%);
     display: block;
+    animation: up-arrow-base 1s cubic-bezier(0.42, 0, 0, 0.995) forwards,
+      fade 1s cubic-bezier(0.42, 0, 0, 0.995);
 
     @media (min-width: 960px) {
       display: none;
@@ -38,11 +40,13 @@
     }
   }
   &__arrow-head {
-    bottom: 125px;
+    bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
     height: 88px;
     width: 100px;
+    animation: up-arrow 1s cubic-bezier(0.42, 0, 0, 0.995) forwards,
+      fade 1s cubic-bezier(0.42, 0, 0, 0.995);
 
     @media (min-width: 960px) {
       display: none;

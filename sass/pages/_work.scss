@@ -1,0 +1,136 @@
+.link-home {
+  color: black;
+}
+
+.sort-section {
+  display: block;
+  text-align: center;
+}
+.sorting-list {
+  list-style-type: none;
+  // width: 100%;
+  text-align: center;
+  margin-bottom: 3rem;
+  // background-color: rgba(255, 69, 0, 0.9);
+  display: inline-block;
+  border-radius: 3px;
+  outline: 1px solid orangered;
+  outline-offset: 0.2rem;
+
+  &__item {
+    color: black;
+    cursor: pointer;
+    padding: 1.4rem 3rem;
+    // background-color: rgba(255, 69, 0, 0.9);
+    text-align: center;
+    display: inline-block;
+    // border: 1px solid rgba(255, 69, 0, 0.9);
+    margin: 0.3rem;
+
+    &:first-child {
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+    &:last-child {
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+
+    &:hover {
+      background-color: rgba(255, 69, 0, 0.9);
+    }
+  }
+}
+
+.work {
+  &__container {
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+  }
+  &__panel {
+    background-color: $color-primary;
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem 0.5rem;
+    margin: 2rem 0 2rem;
+  }
+}
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+}
+.item {
+  &__img-container {
+    position: relative;
+    display: inline-block;
+    flex: 1;
+    margin-left: 3rem;
+    text-align: center;
+
+    &:hover .item__img {
+      // opacity: 0.6;
+      // transform: scale(1.03);
+    }
+
+    &:hover .item__description {
+      opacity: 1;
+      // transform: translate(100px, -50%);
+      animation: slideIn 0.5s ease-out forwards;
+    }
+  }
+
+  @keyframes slideIn {
+    60% {
+      transform: translate(103px, -50%);
+    }
+    100% {
+      transform: translate(100px, -50%);
+    }
+  }
+
+  &__img {
+    transition: all 0.3s;
+    width: 80vw;
+    height: auto;
+    max-width: 800px;
+    animation: fade 2s forwards cubic-bezier(0.42, 0, 0, 0.995);
+  }
+  @media (min-width: 600px) {
+    margin: 5rem;
+  }
+
+  &__description {
+    position: absolute;
+    top: 50%;
+    left: -52%;
+    width: 30%;
+    // outline-offset: 1rem;
+    // outline: 2px solid orangered;
+    opacity: 0;
+    transition: all 0.3s;
+    padding: 2rem 3rem;
+    z-index: 10;
+    color: white;
+    border-radius: 1rem;
+    transform: translateY(-50%);
+    color: rgba(77, 71, 54, 0.6);
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    // border-bottom: 1px solid rgba(255, 69, 0, 0.3);
+    padding-bottom: 0.5rem;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    line-height: 2;
+    text-align: center;
+  }
+}

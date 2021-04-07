@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+        width: 15px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+        /* box-shadow: inset 0 0 5px grey;  */
+        /* border-radius: 10px; */
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        background: rgba(255, 69, 0,.7); 
+        /* border-radius: 10px; */
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+        background: #b30000; 
+        }
+    </style>
+</head>
+<body>
+    <div class="work__container">
+        <a class="link-home" href="./index.html">Home</a>
+        <div class="work__panel">
+            Click any screen below to view the live website.
+        </div>
+
+        <div class="sort-section">
+            <ul class="sorting-list">
+                <li class="sorting-list__item" id="all">All</li>
+                <li class="sorting-list__item" id="recent">Recent</li>
+                <li class="sorting-list__item" id="websites">Websites</li>
+                <li class="sorting-list__item" id="games">Games</li>
+                <li class="sorting-list__item" id="apps">Apps</li>
+            </ul>
+        </div>
+
+        <div class="items" id="results"></div>
+    </div>
+
+   <script src="./js/work.js"></script>
+ 
+</body>
+</html>

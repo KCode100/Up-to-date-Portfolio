@@ -18,6 +18,26 @@
     opacity: 1;
   }
 }
+@keyframes up-arrow {
+  from {
+    bottom: 2rem;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    bottom: 12.5rem;
+  }
+}
+@keyframes up-arrow-base {
+  from {
+    bottom: -8rem;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    bottom: -4px;
+  }
+}
 
 @keyframes left {
   from {
