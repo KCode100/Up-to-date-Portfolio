@@ -327,6 +327,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -883,8 +884,17 @@ body {
   margin-bottom: 3rem;
   display: inline-block;
   border-radius: 3px;
-  outline: 1px solid orangered;
-  outline-offset: 0.2rem;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+  position: -webkit-sticky;
+  position: fixed;
+  top: 30%;
+  right: 6px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-animation: slideDown 0.5s cubic-bezier(0.42, 0, 0, 0.995) 1s forwards, fade 0.5s cubic-bezier(0.42, 0, 0, 0.995) 1s forwards;
+          animation: slideDown 0.5s cubic-bezier(0.42, 0, 0, 0.995) 1s forwards, fade 0.5s cubic-bezier(0.42, 0, 0, 0.995) 1s forwards;
+  opacity: 0;
 }
 
 .sorting-list__item {
@@ -892,18 +902,12 @@ body {
   cursor: pointer;
   padding: 1.4rem 3rem;
   text-align: center;
-  display: inline-block;
+  display: block;
   margin: 0.3rem;
 }
 
-.sorting-list__item:first-child {
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-}
-
-.sorting-list__item:last-child {
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+.sorting-list__item--active {
+  background-color: orangered;
 }
 
 .sorting-list__item:hover {
@@ -912,8 +916,6 @@ body {
 
 .work__container {
   background-color: white;
-  overflow: hidden;
-  position: relative;
 }
 
 .work__panel {
@@ -951,11 +953,11 @@ body {
 
 .item__img-container:hover .item__description {
   opacity: 1;
-  -webkit-animation: slideIn 0.5s ease-out forwards;
-          animation: slideIn 0.5s ease-out forwards;
+  -webkit-animation: slideInLeft 0.5s ease-out forwards;
+          animation: slideInLeft 0.5s ease-out forwards;
 }
 
-@-webkit-keyframes slideIn {
+@-webkit-keyframes slideInLeft {
   60% {
     -webkit-transform: translate(103px, -50%);
             transform: translate(103px, -50%);
@@ -966,7 +968,7 @@ body {
   }
 }
 
-@keyframes slideIn {
+@keyframes slideInLeft {
   60% {
     -webkit-transform: translate(103px, -50%);
             transform: translate(103px, -50%);
@@ -974,6 +976,24 @@ body {
   100% {
     -webkit-transform: translate(100px, -50%);
             transform: translate(100px, -50%);
+  }
+}
+
+@-webkit-keyframes slideDown {
+  0% {
+    top: 30%;
+  }
+  100% {
+    top: 40%;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    top: 30%;
+  }
+  100% {
+    top: 40%;
   }
 }
 
@@ -998,6 +1018,8 @@ body {
   top: 50%;
   left: -52%;
   width: 30%;
+  -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
   opacity: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
