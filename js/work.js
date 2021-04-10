@@ -102,9 +102,21 @@ function showResult(results) {
     }
 }
 
-// LISTEN TO CHOSEN BTN AND APPLY FILTER
+const sortItems = document.querySelectorAll('.sorting-list__item');
 function checkBtn(e) {
-    currentList = []; /*CLEAR PREVIOUSLY MADE ARRAY*/
+    //CHANGE COLOR OF SELECTED BTN
+    if (e.target.classList.contains('sorting-list__item')) {
+        for (i = 0; i < sortItems.length; i ++) {
+            if (sortItems[i] === e.target) {
+                sortItems[i].classList.add('sorting-list__item--active');
+            } else {
+                sortItems[i].classList.remove('sorting-list__item--active');
+            }
+        }
+    }
+
+    // LISTEN TO CHOSEN BTN AND APPLY FILTER
+    currentList = []; /*CLEAR PREVIOUSLY CHOSEN LIST*/
     const chosenBtn = e.target.id;
     let result;
     if (chosenBtn === "recent") {
@@ -120,6 +132,11 @@ function checkBtn(e) {
     } else {
         return;
     }
+
+    //SCROLL TO TOP (FIRST ITEM)
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+
     showResult(result);
 }
 

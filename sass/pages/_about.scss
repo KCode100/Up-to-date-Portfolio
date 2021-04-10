@@ -1,22 +1,49 @@
 .main-about {
   background-color: black;
   padding: 0 2rem;
-  //   height: 100vh;
+  max-width: 110rem;
+  margin: auto;
+}
+.section-about {
+  @media (min-width: 960px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .wow-elements-container {
-  display: inline-block;
   margin: 14.5rem 0 3rem;
 
+  // flex: 1;
+
   @media (min-width: 960px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
     margin-bottom: 14rem;
   }
+}
+.wow-elements {
+  display: inline-block;
 }
 
 .about-me {
   display: inline-block;
-  font-size: 1.6rem;
-  font-weight: 300;
-  line-height: 2;
   animation: up 1s cubic-bezier(0.42, 0, 0, 0.995),
     fade 0.5s cubic-bezier(0.42, 0, 0, 0.995) forwards;
+
+  &__text {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2;
+    @media (min-width: 960px) {
+      margin-bottom: 5rem;
+    }
+  }
+  // flex: 1;
+  @media (min-width: 960px) {
+    width: 40%;
+    margin-top: 20rem;
+  }
 }

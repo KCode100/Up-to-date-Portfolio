@@ -14,8 +14,17 @@
   // background-color: rgba(255, 69, 0, 0.9);
   display: inline-block;
   border-radius: 3px;
-  outline: 1px solid orangered;
-  outline-offset: 0.2rem;
+  // outline: 1px solid orangered;
+  // outline-offset: 0.2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+  position: -webkit-sticky;
+  position: fixed;
+  top: 30%;
+  right: 6px;
+  transform: translateY(-50%);
+  animation: slideDown 0.5s cubic-bezier(0.42, 0, 0, 0.995) 1s forwards,
+    fade 0.5s cubic-bezier(0.42, 0, 0, 0.995) 1s forwards;
+  opacity: 0;
 
   &__item {
     color: black;
@@ -23,18 +32,22 @@
     padding: 1.4rem 3rem;
     // background-color: rgba(255, 69, 0, 0.9);
     text-align: center;
-    display: inline-block;
+    display: block;
     // border: 1px solid rgba(255, 69, 0, 0.9);
     margin: 0.3rem;
 
-    &:first-child {
-      border-top-left-radius: 3px;
-      border-bottom-left-radius: 3px;
+    &--active {
+      background-color: orangered;
     }
-    &:last-child {
-      border-top-right-radius: 3px;
-      border-bottom-right-radius: 3px;
-    }
+
+    // &:first-child {
+    //   border-top-left-radius: 3px;
+    //   border-bottom-left-radius: 3px;
+    // }
+    // &:last-child {
+    //   border-top-right-radius: 3px;
+    //   border-bottom-right-radius: 3px;
+    // }
 
     &:hover {
       background-color: rgba(255, 69, 0, 0.9);
@@ -45,8 +58,8 @@
 .work {
   &__container {
     background-color: white;
-    overflow: hidden;
-    position: relative;
+    // overflow: hidden;
+    // position: relative;
   }
   &__panel {
     background-color: $color-primary;
@@ -62,6 +75,10 @@
   justify-content: center;
   align-items: center;
   gap: 8rem;
+
+  // height: 100vh;
+  // overflow-y: scroll;
+  // scroll-snap-type: y mandatory;
 }
 .item {
   &__img-container {
@@ -71,24 +88,35 @@
     margin-left: 3rem;
     text-align: center;
 
-    &:hover .item__img {
-      // opacity: 0.6;
-      // transform: scale(1.03);
-    }
+    // &:hover .item__img {
+    //   opacity: 0.6;
+    //   transform: scale(1.03);
+    // }
 
     &:hover .item__description {
       opacity: 1;
       // transform: translate(100px, -50%);
-      animation: slideIn 0.5s ease-out forwards;
+      animation: slideInLeft 0.5s ease-out forwards;
     }
+
+    // height: 100vh;
+    // scroll-snap-align: center;
   }
 
-  @keyframes slideIn {
+  @keyframes slideInLeft {
     60% {
       transform: translate(103px, -50%);
     }
     100% {
       transform: translate(100px, -50%);
+    }
+  }
+  @keyframes slideDown {
+    0% {
+      top: 30%;
+    }
+    100% {
+      top: 40%;
     }
   }
 
@@ -109,7 +137,8 @@
     left: -52%;
     width: 30%;
     // outline-offset: 1rem;
-    // outline: 2px solid orangered;
+    // outline: 1px solid orangered;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
     opacity: 0;
     transition: all 0.3s;
     padding: 2rem 3rem;
