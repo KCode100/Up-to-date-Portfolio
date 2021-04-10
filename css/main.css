@@ -869,6 +869,7 @@ body {
 
 @media (min-width: 960px) {
   .wow-line2 {
+    display: inline-block;
     -webkit-animation: right-width 1s 1s cubic-bezier(0.42, 0, 0, 0.995) forwards;
             animation: right-width 1s 1s cubic-bezier(0.42, 0, 0, 0.995) forwards;
     height: 4rem;

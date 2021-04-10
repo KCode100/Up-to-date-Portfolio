@@ -65,6 +65,7 @@
   &-line2 {
     display: none;
     @media (min-width: 960px) {
+      display: inline-block;
       animation: right-width 1s 1s cubic-bezier(0.42, 0, 0, 0.995) forwards;
       height: 4rem;
       right: 30%;
