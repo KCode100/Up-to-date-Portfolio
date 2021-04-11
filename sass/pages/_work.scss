@@ -8,46 +8,27 @@
 }
 .sorting-list {
   list-style-type: none;
-  // width: 100%;
   text-align: center;
-  margin-bottom: 3rem;
-  // background-color: rgba(255, 69, 0, 0.9);
-  display: inline-block;
   border-radius: 3px;
-  // outline: 1px solid orangered;
-  // outline-offset: 0.2rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
-  position: -webkit-sticky;
-  position: fixed;
-  top: 30%;
-  right: 6px;
-  transform: translateY(-50%);
-  animation: slideDown 0.5s cubic-bezier(0.42, 0, 0, 0.995) 1s forwards,
-    fade 0.5s cubic-bezier(0.42, 0, 0, 0.995) 1s forwards;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.6);
+
+  display: inline-block;
+  animation: slideDown 0.8s cubic-bezier(0.42, 0, 0, 0.995) 0.3s forwards,
+    fade 0.8s cubic-bezier(0.42, 0, 0, 0.995) 0.3s forwards;
   opacity: 0;
+  margin-bottom: 5rem;
 
   &__item {
     color: black;
     cursor: pointer;
-    padding: 1.4rem 3rem;
-    // background-color: rgba(255, 69, 0, 0.9);
-    text-align: center;
-    display: block;
-    // border: 1px solid rgba(255, 69, 0, 0.9);
-    margin: 0.3rem;
+    padding: 1rem 2rem;
+    display: inline-block;
+    font-size: 1.4rem;
+    border-radius: 3px;
 
     &--active {
       background-color: orangered;
     }
-
-    // &:first-child {
-    //   border-top-left-radius: 3px;
-    //   border-bottom-left-radius: 3px;
-    // }
-    // &:last-child {
-    //   border-top-right-radius: 3px;
-    //   border-bottom-right-radius: 3px;
-    // }
 
     &:hover {
       background-color: rgba(255, 69, 0, 0.9);
@@ -58,15 +39,24 @@
 .work {
   &__container {
     background-color: white;
-    // overflow: hidden;
-    // position: relative;
   }
   &__panel {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
     background-color: $color-primary;
-    font-size: 2rem;
     text-align: center;
-    padding: 2rem 0.5rem;
-    margin: 2rem 0 2rem;
+    padding: 2rem 1rem;
+    margin: 0 0 2rem;
+
+    &__msg {
+      font-size: 1.6rem;
+      @media (min-width: 960px) {
+        font-size: 2rem;
+      }
+    }
   }
 }
 .items {
@@ -113,10 +103,10 @@
   }
   @keyframes slideDown {
     0% {
-      top: 30%;
+      transform: translateY(-10rem);
     }
     100% {
-      top: 40%;
+      transform: translateY(0);
     }
   }
 
