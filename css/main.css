@@ -872,7 +872,7 @@ body {
     display: inline-block;
     -webkit-animation: right-width 1s 1s cubic-bezier(0.42, 0, 0, 0.995) forwards;
             animation: right-width 1s 1s cubic-bezier(0.42, 0, 0, 0.995) forwards;
-    height: 4rem;
+    height: 3.5rem;
     right: 30%;
     bottom: 3rem;
     background-color: white;
