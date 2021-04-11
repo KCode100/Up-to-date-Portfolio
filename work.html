@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700;900&family=Rock+Salt&display=swap" rel="stylesheet">
     <title>Portfolio</title>
     <link rel="stylesheet" href="./css/main.css">
 
 </head>
-<body>
+<body style="background-color: white;">
     <div class="work__container">
-        <a class="link-home" href="./index.html">Home</a>
         <div class="work__panel">
-            Click any screen below to view the live website.
+            <a class="nav-link nav-link--left nav-link--home" href="./index.html">Kivi Corn</a>
+            <a class="nav-link nav-link--right" href="./about.html">About</a>
+            <p class="work__panel__msg">
+                Click any screen below to view the live website.
+            </p>
         </div>
-
         <div class="sort-section">
             <ul class="sorting-list">
                 <li class="sorting-list__item sorting-list__item--active" id="all">All</li>
@@ -24,11 +27,17 @@
                 <li class="sorting-list__item" id="apps">Apps</li>
             </ul>
         </div>
-
         <div class="items" id="results"></div>
     </div>
 
+    <footer>
+        <a href="#top" class="scroll-up" id="scroll-up">
+            <img class="pointing-up" src="./img/pointing-up.png" alt="pointing-up">
+        </a>
+    </footer>
+
    <script src="./js/work.js"></script>
+   <script src="./js/scrollUp.js"></script>
  
 </body>
 </html>
