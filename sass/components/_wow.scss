@@ -1,76 +1,79 @@
 .wow {
-  position: absolute;
+	position: absolute;
 
-  &-line {
-    top: 10rem;
-    left: 25%;
-    // min-width: 10rem;
-    height: 2.6rem;
-    background-color: $color-primary;
-    animation: left-width 2s 0.5s cubic-bezier(0.42, 0, 0, 0.995) forwards;
+	&-line {
+		top: 10rem;
+		left: 25%;
+		// min-width: 10rem;
+		height: 2.6rem;
+		background-color: $color-primary;
+		animation: left-width 2s 0.5s cubic-bezier(0.42, 0, 0, 0.995) forwards;
 
-    @media (min-width: 960px) {
-      animation: left-width-small 2s 0.5s cubic-bezier(0.42, 0, 0, 0.995)
-        forwards;
-      height: 4rem;
-      left: 0;
-    }
-  }
+		@media (min-width: 960px) {
+			animation: left-width-small 2s 0.5s cubic-bezier(0.42, 0, 0, 0.995)
+				forwards;
+			height: 4rem;
+			left: 0;
+		}
+	}
 
-  &-triangle {
-    top: 11rem;
-    left: 70%;
-    width: 0;
-    height: 0;
-    border: 1rem solid white;
-    // border-width: 49px 24.5px 0 24.5px;
-    border-width: 30px 15px 0 15px;
-    border-color: white transparent transparent transparent;
-    opacity: 0;
-    animation: flash 1s 1s cubic-bezier(0.42, 0, 0, 0.995) forwards,
-      left-rotate 1s 1s cubic-bezier(0.42, 0, 0, 0.995) forwards;
+	&-triangle {
+		top: 11rem;
+		left: 70%;
+		width: 0;
+		height: 0;
+		border: 1rem solid white;
+		// border-width: 49px 24.5px 0 24.5px;
+		border-width: 30px 15px 0 15px;
+		border-color: white transparent transparent transparent;
+		opacity: 0;
+		animation: flash 1s 1s cubic-bezier(0.42, 0, 0, 0.995) forwards,
+			left-rotate 1s 1s cubic-bezier(0.42, 0, 0, 0.995) forwards;
 
-    @media (min-width: 960px) {
-      animation: flash 1s 1s cubic-bezier(0.42, 0, 0, 0.995) forwards,
-        left-rotate 1s 1s cubic-bezier(0.42, 0, 0, 0.995) forwards;
-      left: 12%;
-      border-width: 49px 24.5px 0 24.5px;
-    }
+		@media (min-width: 960px) {
+			animation: flash 1s 1s cubic-bezier(0.42, 0, 0, 0.995) forwards,
+				left-rotate 1s 1s cubic-bezier(0.42, 0, 0, 0.995) forwards;
+			left: 12%;
+			border-width: 49px 24.5px 0 24.5px;
+		}
 
-    &--2 {
-      display: none;
-      @media (min-width: 960px) {
-        display: inline-block;
-        animation: flash 1s 1.5s cubic-bezier(0.42, 0, 0, 0.995) forwards,
-          left-rotate2 1s 1.5s cubic-bezier(0.42, 0, 0, 0.995) forwards;
-        border-width: 30px 15px 0 15px;
-        top: 30%;
-        left: 80%;
-      }
-    }
-  }
+		&--2 {
+			display: none;
+			@media (min-width: 960px) {
+				display: inline-block;
+				animation: flash 1s 1.5s cubic-bezier(0.42, 0, 0, 0.995)
+						forwards,
+					left-rotate2 1s 1.5s cubic-bezier(0.42, 0, 0, 0.995)
+						forwards;
+				border-width: 30px 15px 0 15px;
+				top: 30%;
+				left: 80%;
+			}
+		}
+	}
 
-  &-dot {
-    display: none;
-    @media (min-width: 960px) {
-      display: inline-block;
-      animation: flash 1s cubic-bezier(0.42, 0, 0, 0.995) forwards;
-      height: 1rem;
-      width: 1rem;
-      background-color: white;
-      bottom: 9rem;
-      right: 35%;
-    }
-  }
-  &-line2 {
-    display: none;
-    @media (min-width: 960px) {
-      display: inline-block;
-      animation: right-width 1s 1s cubic-bezier(0.42, 0, 0, 0.995) forwards;
-      height: 3.5rem;
-      right: 30%;
-      bottom: 3rem;
-      background-color: white;
-    }
-  }
+	&-dot {
+		display: none;
+		@media (min-width: 960px) {
+			display: inline-block;
+			animation: flash 1s cubic-bezier(0.42, 0, 0, 0.995) forwards;
+			height: 1rem;
+			width: 1rem;
+			background-color: white;
+			bottom: 9rem;
+			right: 35%;
+		}
+	}
+	&-line2 {
+		display: none;
+		@media (min-width: 960px) {
+			display: inline-block;
+			animation: right-width 1s 1s cubic-bezier(0.42, 0, 0, 0.995)
+				forwards;
+			height: 3.5rem;
+			right: 30%;
+			bottom: 3rem;
+			background-color: white;
+		}
+	}
 }

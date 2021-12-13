@@ -5,6 +5,20 @@ let currentList = [];
 // NEW PROJECT? JUST ADD AN OBJECT IN THE ARRAY BELOW!
 let work = [
     {
+        name: 'Portfolio',
+        type: ['website'],
+        img: './img/mockup/portfolio-full.jpg',
+        link: 'http://bykivi.com/portfolio',
+        description: 'An alternative portfolio website to showcase my work and skills to clients and employers.'
+    },
+    {
+        name: 'Application Programming Interfaces',
+        type: ['app', 'recent'],
+        img: './img//mockup/api-full.png',
+        link: 'http://api.bykivi.com',
+        description: "4 applications to better understand how API's work and their implementations."
+    },
+    {
         name: 'ByKivi.com (WIP)',
         type: ['website', 'recent'],
         img: './img/mockup/this-project-full.jpg',
@@ -45,13 +59,6 @@ let work = [
         img: './img/mockup/memory-game-full.jpg',
         link: 'http://bykivi.com/memory-game',
         description: "Challenge: Build a memory game using vanilla JavaScript within 24 hours. I created an interactive 'Simon Says' game. It saves high Scores, includes speed and sound settings, localStorage, and it's Mobile Responsive."
-    },
-    {
-        name: 'Portfolio',
-        type: ['website'],
-        img: './img/mockup/portfolio-full.jpg',
-        link: 'http://bykivi.com/portfolio',
-        description: 'An alternative portfolio website to showcase my work and skills to clients and employers.'
     },
     {
         name: 'Classic Pong Game',

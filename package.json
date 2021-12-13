@@ -1,0 +1,22 @@
+{
+	"name": "up-to-date-portfolio",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"sass": "sass --watch sass:css"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/KCode100/Up-to-date-Portfolio.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/KCode100/Up-to-date-Portfolio/issues"
+	},
+	"homepage": "https://github.com/KCode100/Up-to-date-Portfolio#readme",
+	"dependencies": {
+		"sass": "^1.43.4"
+	}
+}
