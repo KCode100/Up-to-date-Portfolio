@@ -6,11 +6,18 @@ let currentList = [];
 // CREATE IMAGE MOCKUPS HERE: https://techsini.com/multi-mockup/
 let work = [
     {
-        name: 'Portfolio',
-        type: ['website'],
-        img: './img/mockup/portfolio-full.jpg',
-        link: 'http://bykivi.com/portfolio',
-        description: 'An alternative portfolio website to showcase my work and skills to clients and employers.'
+        name: 'thecommonwealth - Trade-review',
+        type: ['website', 'recent'],
+        img: './img/mockup/tradereview-commonwealth.jpg',
+        link: 'https://trade-review.thecommonwealth.org/',
+        description: ''
+    },
+    {
+        name: 'thecommonwealth - Youth Development Index',
+        type: ['website', 'recent'],
+        img: './img/mockup/ydi-commonwealth2.jpg',
+        link: 'https://youth-development-index.thecommonwealth.org/',
+        description: ''
     },
     {
         name: 'React.js game',
@@ -33,6 +40,13 @@ let work = [
         img: './img/mockup/random-user.jpg',
         link: 'http://bykivi.com/random-user-search/',
         description: 'As a react.js assessment for a job application, I was challenged to create a page displaying random users from randomuser API with search functionality.'
+    },
+    {
+        name: 'Portfolio',
+        type: ['website'],
+        img: './img/mockup/portfolio-full.jpg',
+        link: 'http://bykivi.com/portfolio',
+        description: 'An alternative portfolio website to showcase my work and skills to clients and employers.'
     },
     {
         name: 'Application Programming Interfaces',
