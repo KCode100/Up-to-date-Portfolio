@@ -10,14 +10,29 @@ let work = [
         type: ['website', 'recent'],
         img: './img/mockup/tradereview-commonwealth.jpg',
         link: 'https://trade-review.thecommonwealth.org/',
-        description: ''
+        description: 'The Commonwealth is an association of 54 independent countries. I had the privilege to build the frontend of 2 of their "microsites". The day after deployment these sites had over 100,000 views from across the globe.'
     },
     {
         name: 'thecommonwealth - Youth Development Index',
         type: ['website', 'recent'],
         img: './img/mockup/ydi-commonwealth2.jpg',
         link: 'https://youth-development-index.thecommonwealth.org/',
-        description: ''
+        description: 'The Commonwealth is an association of 54 independent countries. I had the privilege to build the frontend of 2 of their "microsites". The day after deployment these sites had over 100,000 views from across the globe.'
+
+    },
+    {
+        name: 'IPQ Capital',
+        type: ['website', 'recent'],
+        img: './img/mockup/ipqcapital.jpg',
+        link: 'https://ipqcapital.com/',
+        description: "IPQ Capital is a private investment office based in Copenhagen. My task was to produce a pixel perfect implementation of the provided design, using GSAP to animate SVG's on scroll."
+    },
+    {
+        name: 'Sport England - Join The Movement campaign',
+        type: ['website', 'recent'],
+        img: './img/mockup/sport-england.jpg',
+        link: 'https://www.sportengland.org/jointhemovement',
+        description: 'Join The Movement is  a National Lottery-funded campaign helping the public to find ways to get active. My task was to code the Frontend for this theme built with Drupal 9.'
     },
     {
         name: 'React.js game',
