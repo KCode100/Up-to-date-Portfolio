@@ -3,6 +3,7 @@ const resultsEl = document.getElementById('results');
 let currentList = [];
 
 // NEW PROJECT? JUST ADD AN OBJECT IN THE ARRAY BELOW!
+// CREATE IMAGE MOCKUPS HERE: https://techsini.com/multi-mockup/
 let work = [
     {
         name: 'Portfolio',
@@ -10,6 +11,28 @@ let work = [
         img: './img/mockup/portfolio-full.jpg',
         link: 'http://bykivi.com/portfolio',
         description: 'An alternative portfolio website to showcase my work and skills to clients and employers.'
+    },
+    {
+        name: 'React.js game',
+        type: ['game', 'react', 'recent'],
+        img: './img/mockup/react-game-full.png',
+        link: 'http://react-game.bykivi.com/',
+        description: 'This is a classic memory game built with the popular Frontend framework - React! I built this game to enhance my React skills and to demonstrate my JS skill set.'
+    },
+    {
+        name: 'React dog breeds collection',
+        type: ['app', 'game', 'react', 'recent'],
+        img: './img/mockup/dog-breeds.jpg',
+        link: 'http://bykivi.com/dog-breeds/',
+        description: 'As a react.js assessment for a job application, I was challenged to create a page to keep track of your favorite pictures of dog breeds and complete it in 3 hours.'
+
+    },
+    {
+        name: 'React random user API and search',
+        type: ['app', 'game', 'react', 'recent'],
+        img: './img/mockup/random-user.jpg',
+        link: 'http://bykivi.com/random-user-search/',
+        description: 'As a react.js assessment for a job application, I was challenged to create a page displaying random users from randomuser API with search functionality.'
     },
     {
         name: 'Application Programming Interfaces',
@@ -27,7 +50,7 @@ let work = [
     },
     {
         name: 'Landing page',
-        type: ['website', 'recent'],
+        type: ['website'],
         img: './img/mockup/landing-pg-full.jpg',
         link: 'https://kriah.com/hebrew-course',
         description: 'A landing page for a leading educational institution. Responsive site. Modern Design. SEO. A/B testing. Facebook ads.'
@@ -41,7 +64,7 @@ let work = [
     },
     {
         name: 'Landing page (Hebrew)',
-        type: ['website', 'recent'],
+        type: ['website'],
         img: './img/mockup/hebrew-full.jpg',
         link: 'https://kriah.com/zobin-method',
         description: 'A landing page in Hebrew for a leading educational institution. Responsive site. Modern Design. SEO. A/B testing. Facebook ads.'
@@ -87,7 +110,7 @@ let work = [
 function sort(type) {
     let i;
     const workList = work.length;
-    for(i = 0; i < workList; i++) {
+    for (i = 0; i < workList; i++) {
         if (work[i].type.includes(type)) {
             currentList.push(work[i]);
         }
@@ -120,7 +143,7 @@ const sortItems = document.querySelectorAll('.sorting-list__item');
 function checkBtn(e) {
     //CHANGE COLOR OF SELECTED BTN
     if (e.target.classList.contains('sorting-list__item')) {
-        for (i = 0; i < sortItems.length; i ++) {
+        for (i = 0; i < sortItems.length; i++) {
             if (sortItems[i] === e.target) {
                 sortItems[i].classList.add('sorting-list__item--active');
             } else {
@@ -141,7 +164,9 @@ function checkBtn(e) {
         result = sort('app');
     } else if (chosenBtn === 'websites') {
         result = sort('website');
-    }else if (chosenBtn === 'all') {
+    } else if (chosenBtn === 'react') {
+        result = sort('react');
+    } else if (chosenBtn === 'all') {
         result = work;
     } else {
         return;
