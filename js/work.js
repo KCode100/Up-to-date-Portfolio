@@ -25,7 +25,7 @@ let work = [
         type: ['website', 'recent'],
         img: './img/mockup/ipqcapital.jpg',
         link: 'https://ipqcapital.com/',
-        description: "IPQ Capital is a private investment office based in Copenhagen. My task was to produce a pixel perfect implementation of the provided design, using GSAP to animate SVG's on scroll."
+        description: "IPQ Capital is a private investment office based in Copenhagen. My task was to produce a pixel perfect replication of the provided design, using GSAP to animate SVG's on scroll."
     },
     {
         name: 'Sport England - Join The Movement campaign',
