@@ -42,8 +42,16 @@ let work = [
         description: 'This is a classic memory game built with the popular Frontend framework - React! I built this game to enhance my React skills and to demonstrate my JS skill set.'
     },
     {
+        name: 'React and Firebase Gallery Application',
+        type: ['app', 'react', 'recent'],
+        img: './img/mockup/gallery.jpg',
+        link: 'http://bykivi.com/react-gallery/',
+        description: 'Build an instagram-like photo gallery app with React & Firebase'
+
+    },
+    {
         name: 'React dog breeds collection',
-        type: ['app', 'game', 'react', 'recent'],
+        type: ['app', 'react', 'recent'],
         img: './img/mockup/dog-breeds.jpg',
         link: 'http://bykivi.com/dog-breeds/',
         description: 'As a react.js assessment for a job application, I was challenged to create a page to keep track of your favorite pictures of dog breeds and complete it in 3 hours.'
@@ -51,7 +59,7 @@ let work = [
     },
     {
         name: 'React random user API and search',
-        type: ['app', 'game', 'react', 'recent'],
+        type: ['app', 'react', 'recent'],
         img: './img/mockup/random-user.jpg',
         link: 'http://bykivi.com/random-user-search/',
         description: 'As a react.js assessment for a job application, I was challenged to create a page displaying random users from randomuser API with search functionality.'
