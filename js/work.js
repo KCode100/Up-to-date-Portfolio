@@ -35,11 +35,11 @@ let work = [
         description: 'Join The Movement is  a National Lottery-funded campaign helping the public to find ways to get active. My task was to code the Frontend for this theme built with Drupal 9.'
     },
     {
-        name: 'React.js game',
-        type: ['game', 'react', 'recent'],
-        img: './img/mockup/react-game-full.png',
-        link: 'http://react-game.bykivi.com/',
-        description: 'This is a classic memory game built with the popular Frontend framework - React! I built this game to enhance my React skills and to demonstrate my JS skill set.'
+        name: 'Trivia Quiz',
+        type: ['game', 'react', 'recent', 'app'],
+        img: './img/mockup/quiz.png',
+        link: 'http://bykivi.com/quiz',
+        description: 'Challenge yourself with a customized Trivia Quiz. This application was built with React, Material-UI and Framer-motion.'
     },
     {
         name: 'React and Firebase Gallery Application',
@@ -50,19 +50,11 @@ let work = [
 
     },
     {
-        name: 'React dog breeds collection',
-        type: ['app', 'react', 'recent'],
-        img: './img/mockup/dog-breeds.jpg',
-        link: 'http://bykivi.com/dog-breeds/',
-        description: 'As a react.js assessment for a job application, I was challenged to create a page to keep track of your favorite pictures of dog breeds and complete it in 3 hours.'
-
-    },
-    {
-        name: 'React random user API and search',
-        type: ['app', 'react', 'recent'],
-        img: './img/mockup/random-user.jpg',
-        link: 'http://bykivi.com/random-user-search/',
-        description: 'As a react.js assessment for a job application, I was challenged to create a page displaying random users from randomuser API with search functionality.'
+        name: 'React.js game',
+        type: ['game', 'react'],
+        img: './img/mockup/react-game-full.png',
+        link: 'http://react-game.bykivi.com/',
+        description: 'This is a classic memory game built with the popular Frontend framework - React! I built this game to enhance my React skills and to demonstrate my JS skill set.'
     },
     {
         name: 'Portfolio',
@@ -73,14 +65,14 @@ let work = [
     },
     {
         name: 'Application Programming Interfaces',
-        type: ['app', 'recent'],
+        type: ['app'],
         img: './img//mockup/api-full.png',
         link: 'http://api.bykivi.com',
         description: "4 applications to better understand how API's work and their implementations."
     },
     {
         name: 'ByKivi.com (WIP)',
-        type: ['website', 'recent'],
+        type: ['website'],
         img: './img/mockup/this-project-full.jpg',
         link: 'http://bykivi.com',
         description: 'A portfolio site for clients and employers to read about me and to view previous work. Resonsive site. Modern design. Vanilla JavaScript.'
@@ -108,14 +100,14 @@ let work = [
     },
     {
         name: 'Wedding Countdown',
-        type: ['app', 'recent'],
+        type: ['app'],
         img: './img/mockup/countdown-full.jpg',
         link: 'http://bykivi.com/wedding-countdown',
         description: 'A personalized countdown clock to your wedding day! It saves high scores to your device using the LocalStorage API'
     },
     {
         name: 'Memory Game (24hr challenge)',
-        type: ['game', 'recent'],
+        type: ['game'],
         img: './img/mockup/memory-game-full.jpg',
         link: 'http://bykivi.com/memory-game',
         description: "Challenge: Build a memory game using vanilla JavaScript within 24 hours. I created an interactive 'Simon Says' game. It saves high Scores, includes speed and sound settings, localStorage, and it's Mobile Responsive."
@@ -128,19 +120,27 @@ let work = [
         description: 'One of the first computer games ever created!'
     },
     {
+        name: 'React dog breeds collection',
+        type: ['app', 'react'],
+        img: './img/mockup/dog-breeds.jpg',
+        link: 'http://bykivi.com/dog-breeds/',
+        description: 'As a react.js assessment for a job application, I was challenged to create a page to keep track of your favorite pictures of dog breeds and complete it in 3 hours.'
+
+    },
+    {
+        name: 'React random user API and search',
+        type: ['app', 'react'],
+        img: './img/mockup/random-user.jpg',
+        link: 'http://bykivi.com/random-user-search/',
+        description: 'As a react.js assessment for a job application, I was challenged to create a page displaying random users from randomuser API with search functionality.'
+    },
+    {
         name: 'Gematriah Calculator',
         type: ['app'],
         img: './img/mockup/gematriah-full.jpg',
         link: 'http://bykivi.com/gematriah',
         description: 'Calculate the numerical value of Hebrew letters and words.'
-    },
-    {
-        name: 'Quiz Game [WIP]',
-        type: ['game'],
-        img: './img/mockup/quiz.jpg',
-        link: 'http://bykivi.com/quiz',
-        description: 'Challenge yourself with a Trivia Quiz.'
-    },
+    }
 ];
 
 // FILTER THROUGH 'WORK' ARRAY
